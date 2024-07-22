@@ -37,19 +37,22 @@ public class GameLogic {
     public String determineWinner(String predictedClass, String computerChoice) {
         if (predictedClass.equals(computerChoice)) {
             return getTieResult();
+
         } else if (predictedClass.equals("rock")) {
             if (computerChoice.equals("paper")) {
                 return getComputerWinnerResult();
             } else {
                 return getUserWinnerResult();
             }
+
         } else if (predictedClass.equals("paper")) {
             if (computerChoice.equals("scissors")) {
                 return getComputerWinnerResult();
             } else {
                 return getUserWinnerResult();
             }
-        } else {
+
+        } else if (predictedClass.equals("scissors")) {
             if (computerChoice.equals("rock")) {
                 return getComputerWinnerResult();
             } else {
@@ -57,7 +60,7 @@ public class GameLogic {
             }
         }
         
-       // return "Computer choose: " + computerChoice;
+       return "Computer choose: " + computerChoice + ", User choose: " + predictedClass;
     }
 
     /**
