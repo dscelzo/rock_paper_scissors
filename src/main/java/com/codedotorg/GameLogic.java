@@ -44,23 +44,21 @@ public class GameLogic {
             } else {
                 return getUserWinnerResult();
             }
-
         } else if (predictedClass.equals("paper")) {
             if (computerChoice.equals("scissors")) {
                 return getComputerWinnerResult();
             } else {
                 return getUserWinnerResult();
             }
-
         } else if (predictedClass.equals("scissors")) {
             if (computerChoice.equals("rock")) {
                 return getComputerWinnerResult();
             } else {
                 return getUserWinnerResult();
             }
-        }
-        
-       return "Computer choose: " + computerChoice + ", User choose: " + predictedClass;
+        } 
+        // This line can be kept if you want to provide a summary of choices when valid choices are made.
+        return "Computer chose: " + computerChoice + ", User chose: " + predictedClass;
     }
 
     /**
